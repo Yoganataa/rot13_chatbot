@@ -1,3 +1,99 @@
+# Chatbot ROT13
+
+## Informasi Tugas
+
+- **Tugas**: Implementasi ROT13
+- **Kelas**: Kriptografi 7B
+- **Pengajar**: Saiful Nur Budiman
+
+## Anggota Kelompok
+
+1. **Mohammad Arbi Yoganata** - 21104410073
+2. **Beta Nurul Awwalin** - 21104410091
+3. **Kharisma Dindaa Amareta** - 21104410055
+4. **Rizka Magvira** - 21104410089
+
+## Deskripsi Singkat Program
+
+Proyek ini adalah aplikasi chatbot sederhana yang menggunakan enkripsi ROT13, dibangun dengan **Laravel** sebagai backend dan **Bootstrap** sebagai frontend. Chatbot ini memungkinkan pengguna mengirim pesan, dan menampilkan pesan dengan dua versi: terenkripsi dan tidak terenkripsi. Fitur enkripsi dilakukan langsung di backend Laravel tanpa menggunakan library enkripsi eksternal, dan pesan pengguna maupun bot ditampilkan secara bergaya seperti aplikasi WhatsApp.
+
+## Fitur Utama
+
+- **Enkripsi ROT13**: Pesan dikonversi menggunakan enkripsi ROT13 di backend Laravel.
+- **Antarmuka Mirip WhatsApp**: Pesan ditampilkan dalam bubble chat yang mirip dengan antarmuka aplikasi pesan.
+- **Pesan Expandable**: Pengguna dapat mengklik pesan untuk melihat versi terenkripsinya.
+- **Penyimpanan Riwayat Percakapan**: Semua pesan disimpan dalam database.
+
+## Instalasi
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini secara lokal:
+
+### Prasyarat
+
+- **PHP** (disarankan versi 8.0 atau lebih baru)
+- **Composer** - untuk mengelola dependensi PHP
+- **MySQL** atau **SQLite** - sebagai database
+- **Node.js dan npm** - untuk mengelola asset frontend
+
+### Langkah-Langkah Instalasi
+
+1. **Clone Repository**:
+    ```bash
+    git clone https://github.com/Yoganataa/rot13_chatbot.git
+    cd rot13_chatbot
+    ```
+
+2. **Install Dependensi Laravel**:
+    ```bash
+    composer install
+    ```
+
+3. **Konfigurasi Environment**:
+   - Duplikat file `.env.example` menjadi `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Konfigurasi database di file `.env`:
+     ```dotenv
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=nama_database
+     DB_USERNAME=nama_user
+     DB_PASSWORD=password
+     ```
+
+4. **Generate Application Key**:
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Migrate Database**:
+    ```bash
+    php artisan migrate
+    ```
+
+6. **Install Dependencies Frontend dan Build Asset**:
+    ```bash
+    npm install
+    npm run dev
+    ```
+
+7. **Jalankan Server Laravel**:
+    ```bash
+    php artisan serve
+    ```
+
+8. **Akses Aplikasi**:
+   - Buka browser dan kunjungi: [http://localhost:8000](http://localhost:8000)
+
+## Cara Penggunaan
+
+1. Masukkan pesan di kolom input dan klik **Kirim**.
+2. Pesan akan ditampilkan di layar.
+3. Klik pada pesan untuk melihat versi terenkripsi (ROT13) dan klik kembali untuk menutup.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
